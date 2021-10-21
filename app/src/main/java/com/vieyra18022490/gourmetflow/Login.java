@@ -109,7 +109,7 @@ public class Login extends AppCompatActivity {
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
-                            Toast.makeText(Login.this, "Sing In Successful!",
+                            Toast.makeText(Login.this, "Sign In Successful!",
                                     Toast.LENGTH_SHORT).show();
                             Intent in = new Intent(Login.this, MainActivity.class);
                             startActivity(in);
@@ -209,6 +209,8 @@ public class Login extends AppCompatActivity {
         {
             String stuname = uname.getText().toString(); //storing the varibles
             String stpword = upass.getText().toString();
+            stuname = "fake_email1@fake.com";
+            stpword = "TestPassword1";
             signIn(stuname,stpword);
         }
     }
